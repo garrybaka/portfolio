@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Character Design</title>
+    <title>Creasom | Follow Me</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* General Reset */
         * {
@@ -15,41 +17,95 @@
         body {
             font-family: 'Arial', sans-serif;
             color: #333;
-            background-image: url("https://github.com/garrybaka/portfolio/blob/main/background%20image%20.jpg?raw=true");
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            position: relative;
+            overflow: hidden; /* Ensure no overflow issues */
+        }
+
+        /* Background Image with Blur */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("https://github.com/garrybaka/portfolio/raw/main/background%20image%20.jpg");
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
-            margin: 0;
+            filter: blur(6px); /* 60% blur */
+            z-index: -1;
         }
 
         .container {
-            position: relative;
             text-align: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+            max-width: 400px;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
             border-radius: 15px;
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in-out;
+            position: relative;
             z-index: 1;
         }
 
-        h1 {
-            font-size: 36px;
-            margin-bottom: 20px;
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
-        .artwork {
+        .profile img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 5px solid #6d5dcf;
+        }
+
+        .profile h1 {
+            font-size: 26px;
+            margin-bottom: 10px;
+        }
+
+        .profile p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .links a {
+            display: block;
+            text-decoration: none;
+            background-color: #6d5dcf;
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            font-size: 18px;
             display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
+            align-items: center;
             justify-content: center;
         }
 
-        .artwork img {
-            width: 100%;
-            max-width: 300px; /* Adjust size as needed */
-            border-radius: 10px;
+        .links a i {
+            margin-right: 10px;
+        }
+
+        .links a:hover {
+            background-color: #ed72d5;
+            transform: translateY(-5px);
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
@@ -57,40 +113,49 @@
         @media (max-width: 600px) {
             .container {
                 width: 90%;
-                padding: 10px;
+                padding: 20px;
             }
 
-            h1 {
-                font-size: 28px;
+            .profile h1 {
+                font-size: 22px;
             }
 
-            .artwork img {
-                max-width: 200px; /* Adjust size as needed for small screens */
+            .links a {
+                font-size: 16px;
+                padding: 10px 20px;
             }
         }
     </style>
 </head>
+
 <body>
     <div class="container">
-        <h1>Character Design</h1>
-        <div class="artwork">
-            <!-- Add your artwork images here -->
-            <a href="artwork1.html">
-                <img src="https://github.com/garrybaka/portfolio/blob/main/artwork1.jpg?raw=true" alt="Artwork 1">
+        <div class="profile">
+            <img src="https://github.com/garrybaka/portfolio/raw/main/creasom_pfp.jpg" alt="Creasom">
+            <h1>Creasom</h1>
+            <p>Digital Artist & Content Creator</p>
+        </div>
+        <div class="links">
+            <a href="https://www.instagram.com/creasom_" target="_blank">
+                <i class="fab fa-instagram"></i> Instagram
             </a>
-            <a href="artwork2.html">
-                <img src="https://github.com/garrybaka/portfolio/blob/main/artwork2.jpg?raw=true" alt="Artwork 2">
+            <a href="https://x.com/creasom_21" target="_blank">
+                <i class="fab fa-twitter"></i> Twitter
             </a>
-            <a href="artwork3.html">
-                <img src="https://github.com/garrybaka/portfolio/blob/main/artwork3.jpg?raw=true" alt="Artwork 3">
+            <a href="https://cara.app/creasom" target="_blank">
+                <i class="fas fa-link"></i> Cara
             </a>
-            <a href="artwork4.html">
-                <img src="https://github.com/garrybaka/portfolio/blob/main/artwork4.jpg?raw=true" alt="Artwork 4">
+            <a href="https://www.twitch.tv/creasom_" target="_blank">
+                <i class="fab fa-twitch"></i> Twitch
             </a>
-            <a href="artwork5.html">
-                <img src="https://github.com/garrybaka/portfolio/blob/main/artwork5.jpg?raw=true" alt="Artwork 5">
+            <a href="https://patreon.com/Creasom_art?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink" target="_blank">
+                <i class="fab fa-patreon"></i> Patreon
+            </a>
+            <a href="https://www.behance.net/creasom" target="_blank">
+                <i class="fab fa-behance"></i> Behance
             </a>
         </div>
     </div>
 </body>
+
 </html>
